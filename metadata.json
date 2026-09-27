@@ -1,0 +1,8 @@
+{
+  "name": "Lamborghini Aventador Showcase",
+  "description": "Responsive car website showcasing the Lamborghini Aventador LP 780-4 Ultimae with sleek design, specifications, interactive carousel, and animations.",
+  "permissions": [],
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

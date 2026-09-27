@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!--=============== FAVICON ===============-->
+      <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+      <!--=============== METADATA ===============-->
+      <title>Lamborghini Aventador Showcase</title>
+      <meta name="description" content="Responsive car website showcasing the Lamborghini Aventador LP 780-4 Ultimae with sleek design, specifications, interactive carousel, and animations.">
+      <meta property="og:title" content="Lamborghini Aventador Showcase">
+      <meta property="og:description" content="Responsive car website showcasing the Lamborghini Aventador LP 780-4 Ultimae with sleek design, specifications, interactive carousel, and animations.">
+
+      <!--=============== FONTS ===============-->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Montserrat:wght@300;400;500;600;700;800;900&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+
+      <!--=============== REMIXICONS ===============-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+
+      <!--=============== SWIPER CSS ===============-->
+      <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="assets/css/styles.css">
+   </head>
+   <body>
+      <!--==================== HEADER ====================-->
+      <header class="header" id="header">
+         <nav class="nav container">
+            <!-- Zone 1: Wordmark -->
+            <a href="#home" class="nav__logo">
+               <span class="nav__logo-brand">AVENTADOR</span>
+            </a>
+
+            <!-- Zone 2: Navigation Links -->
+            <div class="nav__menu" id="nav-menu">
+               <ul class="nav__list">
+                  <li class="nav__item">
+                     <a href="#home" class="nav__link active-link">Overview</a>
+                  </li>
+                  <li class="nav__item">
+                     <a href="#engineering" class="nav__link">Engineering</a>
+                  </li>
+                  <li class="nav__item">
+                     <a href="#models" class="nav__link">Editions</a>
+                  </li>
+                  <li class="nav__item">
+                     <a href="#telemetry" class="nav__link">Telemetry</a>
+                  </li>
+                  <li class="nav__item">
+                     <a href="#reserve" class="nav__link">Reserve</a>
+                  </li>
+               </ul>
+
+               <!-- Close button -->
+               <div class="nav__close" id="nav-close" aria-label="Close menu">
+                  <i class="ri-close-line"></i>
+               </div>
+            </div>
+
+            <!-- Zone 3: Primary Actions -->
+            <div class="nav__actions">
+               <button class="nav__sound-btn" id="v12-sound-btn" title="Toggle V12 Engine Sound Engine" aria-label="Start V12 Sound Engine">
+                  <i class="ri-volume-up-line" id="sound-icon"></i>
+                  <span id="sound-label">V12 Sound</span>
+               </button>
+
+               <a href="#reserve" class="nav__cta">
+                  <span>Reserve Spec</span>
+               </a>
+
+               <!-- Toggle button for mobile -->
+               <div class="nav__toggle" id="nav-toggle" aria-label="Open menu">
+                  <i class="ri-menu-4-line"></i>
+               </div>
+            </div>
+         </nav>
+      </header>
+
+      <!--==================== MAIN ====================-->
+      <main class="main">
+         <!--==================== HERO / OVERVIEW ====================-->
+         <section class="home section" id="home">
+            <div class="home__ambient-glow"></div>
+
+            <div class="home__container container">
+               <!-- Value proposition & Kicker -->
+               <div class="home__header">
+                  <div class="home__kicker">
+                     <span>Sant'Agata Bolognese</span>
+                     <span class="home__kicker-sep">·</span>
+                     <span>6.5L Naturally Aspirated V12</span>
+                     <span class="home__kicker-sep">·</span>
+                     <span>780 CV Ultimae</span>
+                  </div>
+
+                  <h1 class="home__title">
+                     AVENTADOR <span class="home__title-accent">LP 780-4</span>
+                  </h1>
+
+                  <p class="home__description">
+                     The definitive masterpiece of naturally aspirated V12 combustion. Unrivaled carbon monocoque architecture, 4-wheel active steering, and 780 metric horsepower engineered for pure mechanical emotion.
+                  </p>
+               </div>
+
+               <!-- Interactive Vehicle Showcase & Colorways -->
+               <div class="home__stage">
+                  <div class="home__car-display">
+                     <img src="assets/img/home-car-1.png" alt="Lamborghini Aventador LP 780-4" class="home__car-img" id="hero-car-preview" referrerPolicy="no-referrer">
+                     <img src="assets/img/home-bg.png" alt="Aventador Track Aura" class="home__stage-aura">
+                  </div>
+
+                  <!-- Colorway Switcher Controls -->
+                  <div class="home__controls">
+                     <div class="home__colorway-selector">
+                        <span class="home__control-label">Bespoke Livery:</span>
+                        <div class="home__swatches">
+                           <button class="home__swatch active" data-car="assets/img/home-car-1.png" data-name="Giallo Orion" data-code="PPG 0056" title="Giallo Orion (Golden Sun Yellow)" aria-label="Select Giallo Orion colorway">
+                              <span class="home__swatch-circle" style="background: linear-gradient(135deg, #f59e0b, #d97706);"></span>
+                           </button>
+                           <button class="home__swatch" data-car="assets/img/home-car-2.png" data-name="Grigio Telesto" data-code="PPG 0092" title="Grigio Telesto (Battleship Slate)" aria-label="Select Grigio Telesto colorway">
+                              <span class="home__swatch-circle" style="background: linear-gradient(135deg, #94a3b8, #64748b);"></span>
+                           </button>
+                           <button class="home__swatch" data-car="assets/img/home-car-3.png" data-name="Blu Nethuns" data-code="PPG 0074" title="Blu Nethuns (Electric Royal Blue)" aria-label="Select Blu Nethuns colorway">
+                              <span class="home__swatch-circle" style="background: linear-gradient(135deg, #38bdf8, #0284c7);"></span>
+                           </button>
+                           <button class="home__swatch" data-car="assets/img/home-car-4.png" data-name="Nero Nemesis" data-code="PPG 0012" title="Nero Nemesis (Matte Obsidian Black)" aria-label="Select Nero Nemesis colorway">
+                              <span class="home__swatch-circle" style="background: linear-gradient(135deg, #334155, #0f172a);"></span>
+                           </button>
+                        </div>
+                        <div class="home__livery-name" id="hero-livery-name">Giallo Orion <span class="home__livery-code">PPG 0056</span></div>
+                     </div>
+
+                     <!-- Interactive V12 Throttle Rev Trigger -->
+                     <div class="home__throttle-box">
+                        <div class="home__tachometer">
+                           <div class="home__tachometer-dial">
+                              <div class="home__tachometer-needle" id="tacho-needle"></div>
+                           </div>
+                           <div class="home__tachometer-readout">
+                              <span class="home__tacho-rpm tabular-nums" id="tacho-rpm">800</span>
+                              <span class="home__tacho-unit">RPM</span>
+                           </div>
+                        </div>
+
+                        <button class="home__rev-btn" id="rev-throttle-btn" aria-label="Press and hold to rev V12 engine">
+                           <i class="ri-fire-fill"></i>
+                           <span>Rev V12 Engine</span>
+                        </button>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Primary Proof Metrics Strip (Tabular Numerals) -->
+               <div class="home__metrics-strip">
+                  <div class="home__metric">
+                     <span class="home__metric-value tabular-nums">780 CV</span>
+                     <span class="home__metric-label">Max Power (574 kW @ 8,500 rpm)</span>
+                  </div>
+                  <div class="home__metric-divider"></div>
+                  <div class="home__metric">
+                     <span class="home__metric-value tabular-nums">2.8 s</span>
+                     <span class="home__metric-label">0–100 km/h Acceleration</span>
+                  </div>
+                  <div class="home__metric-divider"></div>
+                  <div class="home__metric">
+                     <span class="home__metric-value tabular-nums">355 km/h</span>
+                     <span class="home__metric-label">Top Track Velocity</span>
+                  </div>
+                  <div class="home__metric-divider"></div>
+                  <div class="home__metric">
+                     <span class="home__metric-value tabular-nums">350 Units</span>
+                     <span class="home__metric-label">Worldwide Production Run</span>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <!--==================== ENGINEERING & AERODYNAMICS (BENTO GRID) ====================-->
+         <section class="section engineering" id="engineering">
+            <div class="container">
+               <div class="section__header">
+                  <div class="section__kicker">Mechanism & Capabilities</div>
+                  <h2 class="section__title">
+                     AERODYNAMICS BORN FROM <br>
+                     <span class="title-accent">AEROSPACE ARCHITECTURE</span>
+                  </h2>
+                  <p class="section__lead">
+                     Every contour sculpts high-speed airflow with zero compromise. The Aventador Ultimae pairs aerodynamic vectoring with an ultra-rigid carbon-fiber monocoque chassis.
+                  </p>
+               </div>
+
+               <!-- Asymmetric Bento Grid -->
+               <div class="engineering__bento">
+                  <!-- Marquee Card 1: ALA 2.0 & Wind Tunnel (col-span-2) -->
+                  <div class="bento__card bento__card--wide">
+                     <div class="bento__image-wrapper">
+                        <img src="assets/img/aero_wind_tunnel_chassis.jpg" alt="Aventador Aerodynamic Wind Tunnel Testing" class="bento__image" referrerPolicy="no-referrer">
+                        <div class="bento__image-scrim"></div>
+                     </div>
+                     <div class="bento__content">
+                        <div class="bento__tag">Active Aerodynamics</div>
+                        <h3 class="bento__title">ALA 2.0 Dynamic Aero Vectoring</h3>
+                        <p class="bento__desc">
+                           Electronically actuated aero-flaps alter downforce distribution in 500 milliseconds, optimizing cornering grip or high-speed low drag.
+                        </p>
+                        <!-- Interactive Aero Mode Switcher -->
+                        <div class="aero__modes">
+                           <button class="aero__mode-btn active" data-mode="high" id="aero-high-btn">
+                              <i class="ri-shield-flash-line"></i> High Downforce (Track)
+                           </button>
+                           <button class="aero__mode-btn" data-mode="speed" id="aero-speed-btn">
+                              <i class="ri-speed-up-line"></i> Low Drag (355 km/h)
+                           </button>
+                        </div>
+                        <div class="aero__stat-note" id="aero-stat-note">
+                           Active Mode: +400 kg aerodynamic vertical load @ 200 km/h with active rear wing deployed at 15°.
+                        </div>
+                     </div>
+                  </div>
+
+                  <!-- Card 2: Naturally Aspirated V12 Engine -->
+                  <div class="bento__card">
+                     <div class="bento__content">
+                        <div class="bento__tag">Combustion Icon</div>
+                        <h3 class="bento__title">6.5L 60° Naturally Aspirated V12</h3>
+                        <p class="bento__desc">
+                           Titanium intake valves, lightweight dry-sump lubrication, and variable valve timing unleash 720 Nm torque at 6,750 rpm.
+                        </p>
+                        <div class="bento__spec-list">
+                           <div class="bento__spec-row">
+                              <span>Displacement</span>
+                              <span class="tabular-nums font-mono">6,498 cm³</span>
+                           </div>
+                           <div class="bento__spec-row">
+                              <span>Max Engine Speed</span>
+                              <span class="tabular-nums font-mono">8,700 rpm</span>
+                           </div>
+                           <div class="bento__spec-row">
+                              <span>Specific Output</span>
+                              <span class="tabular-nums font-mono">120 CV/L</span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <!-- Card 3: Fighter-Jet Cockpit Architecture -->
+                  <div class="bento__card">
+                     <div class="bento__image-wrapper">
+                        <img src="assets/img/hero_aventador_cockpit.jpg" alt="Aventador Fighter Jet Cockpit Interior" class="bento__image" referrerPolicy="no-referrer">
+                        <div class="bento__image-scrim"></div>
+                     </div>
+                     <div class="bento__content">
+                        <div class="bento__tag">Ergonomics & Carbon</div>
+                        <h3 class="bento__title">Aviation Cockpit Architecture</h3>
+                        <p class="bento__desc">
+                           Full carbon-fiber tub with Alcantara bucket seats, military-inspired flip-cover ignition trigger, and telemetry HUD console.
+                        </p>
+                        <div class="bento__spec-list">
+                           <div class="bento__spec-row">
+                              <span>Dry Weight</span>
+                              <span class="tabular-nums font-mono">1,550 kg</span>
+                           </div>
+                           <div class="bento__spec-row">
+                              <span>Weight / Power Ratio</span>
+                              <span class="tabular-nums font-mono">1.98 kg/CV</span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <!-- Marquee Card 4: Dynamic Track Film (col-span-2) -->
+                  <div class="bento__card bento__card--wide bento__card--media">
+                     <div class="video-container">
+                        <video src="assets/img/about-vid.mp4" id="main-track-video" loop muted playsinline class="track-video"></video>
+                        <div class="video-overlay" id="video-overlay">
+                           <div class="video-controls">
+                              <button class="video-btn" id="video-toggle-play" aria-label="Play or pause track video">
+                                 <i class="ri-play-fill" id="video-play-icon"></i>
+                              </button>
+                              <button class="video-btn" id="video-toggle-mute" aria-label="Toggle audio">
+                                 <i class="ri-volume-mute-fill" id="video-mute-icon"></i>
+                              </button>
+                              <span class="video-label">Autodromo Nazionale Monza · Ultimae Track Run</span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <!--==================== EDITIONS & MODELS SHOWCASE ====================-->
+         <section class="section models" id="models">
+            <div class="container">
+               <div class="section__header">
+                  <div class="section__kicker">Proof & Curation</div>
+                  <h2 class="section__title">
+                     LIMITED PRODUCTION <br>
+                     <span class="title-accent">LEGENDARY EDITIONS</span>
+                  </h2>
+                  <p class="section__lead">
+                     Explore the hallmark specifications of the Aventador lineage. Each chassis is hand-assembled in Sant'Agata Bolognese with individual build plaques.
+                  </p>
+               </div>
+
+               <!-- Model Cards Grid -->
+               <div class="models__grid">
+                  <!-- Model 1: Ultimae Coupe -->
+                  <article class="model__card" data-model-id="ultimae-coupe">
+                     <div class="model__badge">Flagship Finale</div>
+                     <div class="model__image-box">
+                        <img src="assets/img/model-car-1.png" alt="Aventador LP 780-4 Ultimae Coupe" class="model__img" referrerPolicy="no-referrer">
+                     </div>
+                     <div class="model__details">
+                        <div class="model__meta">
+                           <span>Coupe</span>
+                           <span class="meta-sep">·</span>
+                           <span>All-Wheel Drive</span>
+                           <span class="meta-sep">·</span>
+                           <span>780 CV</span>
+                        </div>
+                        <h3 class="model__title">Aventador LP 780-4 Ultimae</h3>
+                        <p class="model__summary">
+                           The definitive numbered swan-song combining SVJ performance dynamics with the elegant silhouette of the Aventador S.
+                        </p>
+                        <div class="model__specs">
+                           <div class="model__spec">
+                              <span class="model__spec-val tabular-nums font-mono">2.8 s</span>
+                              <span class="model__spec-lbl">0–100 km/h</span>
+                           </div>
+                           <div class="model__spec">
+                              <span class="model__spec-val tabular-nums font-mono">355 km/h</span>
+                              <span class="model__spec-lbl">Max Speed</span>
+                           </div>
+                           <div class="model__spec">
+                              <span class="model__spec-val tabular-nums font-mono">350 pcs</span>
+                              <span class="model__spec-lbl">Allocation</span>
+                           </div>
+                        </div>
+                        <div class="model__footer">
+                           <button class="model__inspect-btn" data-model="ultimae-coupe">
+                              <span>Technical Data</span>
+                              <i class="ri-arrow-right-up-line"></i>
+                           </button>
+                           <a href="#reserve" class="model__reserve-link" data-edition="Aventador LP 780-4 Ultimae Coupe">
+                              Reserve
+                           </a>
+                        </div>
+                     </div>
+                  </article>
+
+                  <!-- Model 2: SVJ Record Edition -->
+                  <article class="model__card" data-model-id="svj">
+                     <div class="model__badge">Nürburgring Record Holder</div>
+                     <div class="model__image-box">
+                        <img src="assets/img/model-car-2.png" alt="Aventador SVJ (Superveloce Jota)" class="model__img" referrerPolicy="no-referrer">
+                     </div>
+                     <div class="model__details">
+                        <div class="model__meta">
+                           <span>Coupe</span>
+                           <span class="meta-sep">·</span>
+                           <span>ALA 2.0 Aero</span>
+                           <span class="meta-sep">·</span>
+                           <span>770 CV</span>
+                        </div>
+                        <h3 class="model__title">Aventador SVJ (Superveloce Jota)</h3>
+                        <p class="model__summary">
+                           Track-focused aerodynamics with ALA 2.0 active flaps and high-downforce carbon wing that set the production lap record.
+                        </p>
+                        <div class="model__specs">
+                           <div class="model__spec">
+                              <span class="model__spec-val tabular-nums font-mono">2.8 s</span>
+                              <span class="model__spec-lbl">0–100 km/h</span>
+                           </div>
+                           <div class="model__spec">
+                              <span class="model__spec-val tabular-nums font-mono">352 km/h</span>
+                              <span class="model__spec-lbl">Max Speed</span>
+                           </div>
+                           <div class="model__spec">
+                              <span class="model__spec-val tabular-nums font-mono">900 pcs</span>
+                              <span class="model__spec-lbl">Allocation</span>
+                           </div>
+                        </div>
+                        <div class="model__footer">
+                           <button class="model__inspect-btn" data-model="svj">
+                              <span>Technical Data</span>
+                              <i class="ri-arrow-right-up-line"></i>
+                           </button>
+                           <a href="#reserve" class="model__reserve-link" data-edition="Aventador SVJ">
+                              Reserve
+                           </a>
+                        </div>
+                     </div>
+                  </article>
+
+                  <!-- Model 3: Ultimae Roadster -->
+                  <article class="model__card" data-model-id="ultimae-roadster">
+                     <div class="model__badge">Open-Air V12 Acoustics</div>
+                     <div class="model__image-box">
+                        <img src="assets/img/model-car-3.png" alt="Aventador LP 780-4 Ultimae Roadster" class="model__img" referrerPolicy="no-referrer">
+                     </div>
+                     <div class="model__details">
+                        <div class="model__meta">
+                           <span>Roadster</span>
+                           <span class="meta-sep">·</span>
+                           <span>Carbon Targa</span>
+                           <span class="meta-sep">·</span>
+                           <span>780 CV</span>
+                        </div>
+                        <h3 class="model__title">Aventador LP 780-4 Roadster</h3>
+                        <p class="model__summary">
+                           Unadulterated naturally aspirated acoustic freedom with dual removable high-pressure carbon roof panels weighing under 6 kg.
+                        </p>
+                        <div class="model__specs">
+                           <div class="model__spec">
+                              <span class="model__spec-val tabular-nums font-mono">2.9 s</span>
+                              <span class="model__spec-lbl">0–100 km/h</span>
+                           </div>
+                           <div class="model__spec">
+                              <span class="model__spec-val tabular-nums font-mono">355 km/h</span>
+                              <span class="model__spec-lbl">Max Speed</span>
+                           </div>
+                           <div class="model__spec">
+                              <span class="model__spec-val tabular-nums font-mono">250 pcs</span>
+                              <span class="model__spec-lbl">Allocation</span>
+                           </div>
+                        </div>
+                        <div class="model__footer">
+                           <button class="model__inspect-btn" data-model="ultimae-roadster">
+                              <span>Technical Data</span>
+                              <i class="ri-arrow-right-up-line"></i>
+                           </button>
+                           <a href="#reserve" class="model__reserve-link" data-edition="Aventador LP 780-4 Ultimae Roadster">
+                              Reserve
+                           </a>
+                        </div>
+                     </div>
+                  </article>
+               </div>
+            </div>
+         </section>
+
+         <!--==================== TELEMETRY & MECHANICAL SPECIFICATIONS ====================-->
+         <section class="section telemetry" id="telemetry">
+            <div class="container">
+               <div class="section__header">
+                  <div class="section__kicker">Mechanical Blueprint</div>
+                  <h2 class="section__title">
+                     AVENTADOR LP 780-4 <br>
+                     <span class="title-accent">CHASSIS & POWERTRAIN</span>
+                  </h2>
+               </div>
+
+               <div class="telemetry__display">
+                  <div class="telemetry__blueprint">
+                     <span class="telemetry__watermark">780-4</span>
+                     <img src="assets/img/info-car.png" alt="Aventador Blueprint Chassis" class="telemetry__car-img" referrerPolicy="no-referrer">
+                  </div>
+
+                  <!-- Comprehensive Technical Specs Grid -->
+                  <div class="telemetry__table-card">
+                     <div class="telemetry__table-header">
+                        <h3>Factory Technical Specifications</h3>
+                        <span class="telemetry__badge">Sant'Agata Certified</span>
+                     </div>
+
+                     <div class="telemetry__grid">
+                        <div class="telemetry__row">
+                           <span class="telemetry__label">Engine Architecture</span>
+                           <span class="telemetry__val">V12 60°, MPI multi-point injection</span>
+                        </div>
+                        <div class="telemetry__row">
+                           <span class="telemetry__label">Transmission & Shift Time</span>
+                           <span class="telemetry__val font-mono tabular-nums">7-speed ISR · 50 milliseconds</span>
+                        </div>
+                        <div class="telemetry__row">
+                           <span class="telemetry__label">Steering System</span>
+                           <span class="telemetry__val">LDS dynamic + LRS 4-wheel active steering</span>
+                        </div>
+                        <div class="telemetry__row">
+                           <span class="telemetry__label">Suspension Type</span>
+                           <span class="telemetry__val">Pushrod magneto-rheological active dampers</span>
+                        </div>
+                        <div class="telemetry__row">
+                           <span class="telemetry__label">Carbon-Ceramic Brakes</span>
+                           <span class="telemetry__val font-mono tabular-nums">Front 400×38mm · Rear 380×38mm</span>
+                        </div>
+                        <div class="telemetry__row">
+                           <span class="telemetry__label">100–0 km/h Braking Distance</span>
+                           <span class="telemetry__val font-mono tabular-nums">30.0 meters</span>
+                        </div>
+                        <div class="telemetry__row">
+                           <span class="telemetry__label">Fuel Consumption / Emissions</span>
+                           <span class="telemetry__val font-mono tabular-nums">18.0 l/100 km · 442 g/km (WLTP)</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <!--==================== VIP CONCIERGE & ALLOCATION (RESERVE) ====================-->
+         <section class="section reserve" id="reserve">
+            <div class="container">
+               <div class="reserve__grid">
+                  <div class="reserve__info">
+                     <div class="section__kicker">Client Services & Allocation</div>
+                     <h2 class="reserve__title">
+                        ACQUIRE YOUR <br>
+                        <span class="title-accent">AVENTADOR ALLOCATION</span>
+                     </h2>
+                     <p class="reserve__desc">
+                        Submit a priority acquisition enquiry for the Aventador LP 780-4 Ultimae or certified Squadra Corse track inventory. An executive concierge manager will contact you within 24 hours.
+                     </p>
+
+                     <div class="reserve__guarantees">
+                        <div class="reserve__guarantee-item">
+                           <i class="ri-shield-check-line"></i>
+                           <div>
+                              <strong>Certified Provenance</strong>
+                              <span>Official factory Certificate of Authenticity and chassis documentation.</span>
+                           </div>
+                        </div>
+                        <div class="reserve__guarantee-item">
+                           <i class="ri-flight-takeoff-line"></i>
+                           <div>
+                              <strong>Factory Handover Experience</strong>
+                              <span>Private visit to Centro Stile and track induction in Sant'Agata Bolognese.</span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <!-- Executive Reservation Form -->
+                  <div class="reserve__form-card">
+                     <h3 class="reserve__form-title">Priority Reservation Request</h3>
+                     <form class="reserve__form" id="reserve-form">
+                        <div class="form__group">
+                           <label for="reserve-name" class="form__label">Full Name</label>
+                           <input type="text" id="reserve-name" name="name" placeholder="Lord / Dr. / Name" class="form__input" required>
+                        </div>
+
+                        <div class="form__group">
+                           <label for="reserve-email" class="form__label">Corporate / Personal Email</label>
+                           <input type="email" id="reserve-email" name="email" placeholder="name@domain.com" class="form__input" required>
+                        </div>
+
+                        <div class="form__row-2">
+                           <div class="form__group">
+                              <label for="reserve-model" class="form__label">Desired Edition</label>
+                              <select id="reserve-model" name="model" class="form__select">
+                                 <option value="Aventador LP 780-4 Ultimae Coupe">LP 780-4 Ultimae Coupe</option>
+                                 <option value="Aventador LP 780-4 Ultimae Roadster">LP 780-4 Ultimae Roadster</option>
+                                 <option value="Aventador SVJ">Aventador SVJ Coupe</option>
+                                 <option value="Custom Squadra Corse Spec">Custom Squadra Corse Spec</option>
+                              </select>
+                           </div>
+
+                           <div class="form__group">
+                              <label for="reserve-location" class="form__label">Preferred Concierge Hub</label>
+                              <select id="reserve-location" name="location" class="form__select">
+                                 <option value="Sant'Agata Bolognese, Italy">Sant'Agata Bolognese, Italy</option>
+                                 <option value="Monaco, Monte-Carlo">Monaco, Monte-Carlo</option>
+                                 <option value="London, Mayfair">London, Mayfair</option>
+                                 <option value="Dubai, DIFC">Dubai, DIFC</option>
+                                 <option value="Los Angeles, Beverly Hills">Los Angeles, Beverly Hills</option>
+                                 <option value="Tokyo, Ginza">Tokyo, Ginza</option>
+                              </select>
+                           </div>
+                        </div>
+
+                        <div class="form__group">
+                           <label for="reserve-experience" class="form__label">Delivery Experience</label>
+                           <select id="reserve-experience" name="experience" class="form__select">
+                              <option value="Sant'Agata Factory Handover & Track Induction">Sant'Agata Factory Handover & Track Induction</option>
+                              <option value="Private Enclosed White-Glove Transporter">Private Enclosed White-Glove Transporter</option>
+                              <option value="Silverstone / Circuit Track Day Delivery">Silverstone / Circuit Track Day Delivery</option>
+                           </select>
+                        </div>
+
+                        <button type="submit" class="button form__submit-btn" id="reserve-submit-btn">
+                           <span>Submit Priority Request</span>
+                           <i class="ri-arrow-right-line"></i>
+                        </button>
+
+                        <div class="form__feedback" id="reserve-feedback" role="status"></div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
+
+      <!--==================== TECHNICAL DRAWER MODAL ====================-->
+      <div class="spec-modal" id="spec-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-model-title">
+         <div class="spec-modal__backdrop" id="spec-modal-backdrop"></div>
+         <div class="spec-modal__drawer">
+            <div class="spec-modal__header">
+               <div>
+                  <span class="spec-modal__kicker">Certified Mechanical Specification</span>
+                  <h3 class="spec-modal__title" id="modal-model-title">Aventador LP 780-4 Ultimae</h3>
+               </div>
+               <button class="spec-modal__close" id="spec-modal-close" aria-label="Close specifications drawer">
+                  <i class="ri-close-line"></i>
+               </button>
+            </div>
+
+            <div class="spec-modal__body" id="modal-specs-content">
+               <!-- Populated dynamically via JS -->
+            </div>
+
+            <div class="spec-modal__footer">
+               <a href="#reserve" class="button spec-modal__reserve-btn" id="modal-reserve-btn">
+                  Reserve This Allocation
+               </a>
+            </div>
+         </div>
+      </div>
+
+      <!--==================== CONFIRMATION DIALOG ====================-->
+      <div class="confirm-dialog" id="confirm-dialog" aria-hidden="true" role="dialog">
+         <div class="confirm-dialog__box">
+            <div class="confirm-dialog__icon">
+               <i class="ri-checkbox-circle-fill"></i>
+            </div>
+            <h3 class="confirm-dialog__title">Priority Allocation Registered</h3>
+            <p class="confirm-dialog__desc" id="confirm-dialog-msg">
+               Your concierge reference code has been recorded.
+            </p>
+            <div class="confirm-dialog__serial">
+               <span class="serial-lbl">Allocation Reference:</span>
+               <strong class="serial-code font-mono tabular-nums" id="confirm-serial-code">AVT-780-0000</strong>
+            </div>
+            <button class="button confirm-dialog__btn" id="confirm-dialog-close">
+               Acknowledge & Close
+            </button>
+         </div>
+      </div>
+
+      <!--==================== FOOTER ====================-->
+      <footer class="footer">
+         <div class="footer__container container">
+            <div class="footer__top">
+               <div class="footer__brand-col">
+                  <a href="#home" class="footer__logo">AVENTADOR</a>
+                  <p class="footer__tagline">
+                     Automobili Lamborghini S.p.A. Sant'Agata Bolognese, Italy. The immortal naturally aspirated V12 legacy.
+                  </p>
+               </div>
+
+               <div class="footer__nav-col">
+                  <span class="footer__nav-heading">Navigation</span>
+                  <ul class="footer__links">
+                     <li><a href="#home" class="footer__link">Overview</a></li>
+                     <li><a href="#engineering" class="footer__link">Engineering & ALA</a></li>
+                     <li><a href="#models" class="footer__link">Limited Editions</a></li>
+                     <li><a href="#telemetry" class="footer__link">Telemetry Specs</a></li>
+                     <li><a href="#reserve" class="footer__link">Acquisition Concierge</a></li>
+                  </ul>
+               </div>
+
+               <div class="footer__nav-col">
+                  <span class="footer__nav-heading">Squadra Corse</span>
+                  <ul class="footer__links">
+                     <li><a href="#" class="footer__link">Super Trofeo Europe</a></li>
+                     <li><a href="#" class="footer__link">GT3 Motorsport</a></li>
+                     <li><a href="#" class="footer__link">Ad Personam Bespoke Studio</a></li>
+                     <li><a href="#" class="footer__link">Heritage Museum (MUDETEC)</a></li>
+                  </ul>
+               </div>
+
+               <div class="footer__social-col">
+                  <span class="footer__nav-heading">Connect</span>
+                  <div class="footer__social">
+                     <a href="https://www.facebook.com/Lamborghini/" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="Official Facebook">
+                        <i class="ri-facebook-fill"></i>
+                     </a>
+                     <a href="https://www.instagram.com/lamborghini/" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="Official Instagram">
+                        <i class="ri-instagram-line"></i>
+                     </a>
+                     <a href="https://twitter.com/Lamborghini" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="Official Twitter">
+                        <i class="ri-twitter-x-line"></i>
+                     </a>
+                     <a href="https://www.youtube.com/user/Lamborghini" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="Official YouTube">
+                        <i class="ri-youtube-line"></i>
+                     </a>
+                  </div>
+               </div>
+            </div>
+
+            <div class="footer__bottom">
+               <span class="footer__copy">
+                  &copy; Automobili Lamborghini S.p.A. All Rights Reserved. Crafted for high-performance automotive appreciation.
+               </span>
+               <div class="footer__legal">
+                  <a href="#">Privacy Policy</a>
+                  <span class="sep">·</span>
+                  <a href="#">Legal Notice</a>
+                  <span class="sep">·</span>
+                  <a href="#">WLTP Energy Metrics</a>
+               </div>
+            </div>
+         </div>
+      </footer>
+
+      <!--========== SCROLL UP ==========-->
+      <a href="#home" class="scrollup" id="scroll-up" aria-label="Scroll to top of page">
+         <i class="ri-arrow-up-line"></i>
+      </a>
+
+      <!--=============== SCRIPTS ===============-->
+      <script src="assets/js/scrollreveal.min.js"></script>
+      <script src="assets/js/swiper-bundle.min.js"></script>
+      <script src="assets/js/main.js"></script>
+   </body>
+</html>
